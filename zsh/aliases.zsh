@@ -1,21 +1,4 @@
 # My aliases
-alias git=hub
-alias ss='./script/server'
-alias sc='./script/console'
-alias pull="git pull"
-alias ci="git commit"
-alias st="git st"
-alias fetch="git fetch"
-alias "log"="git log"
-alias push="git push"
-alias add="git add"
-alias tag="ctags -R config -R app -R lib -R script -R spec"
-alias tag!="ctags -R ."
-alias fx='git fetch && gitx'
-alias giff='git diff | gitx'
-alias gitx='gitx --all'
-alias stamp='date +%Y%m%d%H%M'
-
 alias easy_off='sudo kextunload -v /System/Library/Extensions/EasyTetherUSBEthernet.kext'
 
 alias c='bundle exec cucumber'
