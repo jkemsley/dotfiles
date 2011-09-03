@@ -1,48 +1,30 @@
-ruby_version() {
-  v=$(ruby -v | awk '{ printf("%.5s", $2) }')
-  echo -ne "$v"
-}
-
 git_branch() {
-  echo -ne $(git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  echo $(/usr/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
 }
 
 git_dirty() {
-  st=$(git st 2>/dev/null | tail -n 1)
+  st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
   if [[ $st == "" ]]
   then
-    echo " "
+    echo ""
   else
     if [[ $st == "nothing to commit (working directory clean)" ]]
     then
-      echo " "
+      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
     else
-      echo "*"
+      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
     fi
   fi
 }
 
-git_pair() {
-  git pair -si
-}
-
 git_prompt_info () {
- ref=$(git symbolic-ref HEAD 2>/dev/null) || return
- echo "(%{\e[0;35m%}${ref#refs/heads/}%{\e[0m%})"
-}
-
-project_name () {
-  name=$(pwd | awk -F'projects/' '{print $2}' | awk -F/ '{print $1}')
-  echo $name
-}
-
-project_name_color () {
-  name=$(project_name)
-  echo "%{\e[0;35m%}${name}%{\e[0m%}"
+ ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
+# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
+ echo "${ref#refs/heads/}"
 }
 
 unpushed () {
-  git cherry -v origin/$(git_branch) 2>/dev/null
+  /usr/bin/git cherry -v origin/$(git_branch) 2>/dev/null
 }
 
 need_push () {
@@ -50,29 +32,46 @@ need_push () {
   then
     echo " "
   else
-    echo "%{\e[0;33m%}$%{\e[0m%}"
+    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
   fi
 }
 
-export PROMPT=$'%{$fg[red]%}$(ruby_version) %{\e[0;36m%}%1/%{\e[0m%}/ '
-set_prompt () {
-  export RPROMPT="$(git_prompt_info)$(git_dirty)$(need_push)"
-}
-
-set_iterm_title() {
-  echo -ne "\e]2;$(pwd)\a" 
-}
-
-set_iterm_tab() {
-  if [ $TABNAME ]
+# This keeps the number of todos always available the right hand side of my
+# command line. I filter it to only count those tagged as "+next", so it's more
+# of a motivation to clear out the list.
+todo(){
+  if $(which todo.sh &> /dev/null)
   then
-    echo -ne "\e]1;$TABNAME\a" 
+    num=$(echo $(todo.sh ls +next | wc -l))
+    let todos=num-2
+    if [ $todos != 0 ]
+    then
+      echo "$todos"
+    else
+      echo ""
+    fi
   else
-    echo -ne "\e]1;$(project_name)\a" 
+    echo ""
   fi
+}
+
+user_name(){
+	echo "%{$fg[magenta]%}%n%{$reset_color%}"
+}
+
+host_name(){
+	echo "%{$fg[yellow]%}%m%{$reset_color%}"
+}
+
+directory_name(){
+  echo "%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
+}
+
+export PROMPT=$'\n$(user_name) at $(host_name) in $(directory_name) $(git_dirty)$(need_push)\n› '
+set_prompt () {
+  export RPROMPT="%{$fg_bold[grey]%}$(todo)%{$reset_color%}"
 }
 
 precmd() {
-  print -Pn "\e]0;%~\a"
   set_prompt
 }
