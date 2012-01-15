@@ -14,9 +14,3 @@ source ~/.zsh/aliases.zsh
 source ~/.zsh/bindkeys.zsh
 source ~/.zsh/completion_rake.zsh
 
-# rbenv Installation
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# MAMP locations
-export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin:$PATH"
