@@ -18,3 +18,6 @@ source ~/.zsh/projects.zsh
 # rbenv Installation
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# MAMP locations
+export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin:$PATH"
