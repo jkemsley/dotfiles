@@ -22,3 +22,10 @@ export GREP_OPTIONS='--color=auto'
 export EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"' # edit git commit messages (among other things) in vim
 
 export RUBYOPT='rubygems' # ruby always requires rubygems
+
+# rbenv Installation
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# MAMP locations
+export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin:$PATH"

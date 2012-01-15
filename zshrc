@@ -12,8 +12,7 @@ source ~/.zsh/set_options.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/bindkeys.zsh
-source ~/.zsh/completion_rake.zsh 
-source ~/.zsh/projects.zsh
+source ~/.zsh/completion_rake.zsh
 
 # rbenv Installation
 export PATH="$HOME/.rbenv/bin:$PATH"
