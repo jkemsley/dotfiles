@@ -14,3 +14,7 @@ source ~/.zsh/aliases.zsh
 source ~/.zsh/bindkeys.zsh
 source ~/.zsh/completion_rake.zsh 
 source ~/.zsh/projects.zsh
+
+# rbenv Installation
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
