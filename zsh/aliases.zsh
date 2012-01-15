@@ -20,7 +20,6 @@ function trash () {
 function current_working_project {
   pwd > ~/bin/config/current_project_path
 }
-cdefault
 
 function :w () {
   echo "Ugh. You're not in vim, and your shits all retarded"
