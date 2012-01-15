@@ -17,12 +17,6 @@ function trash () {
   mv $* ~/.Trash
 }
 
-# cd to the default working directory set by current_working_project
-function cdefault { 
-  export wdir=`cat $HOME/bin/config/current_project_path`
-  cd $wdir 
-}
-
 function current_working_project {
   pwd > ~/bin/config/current_project_path
 }
