@@ -29,3 +29,4 @@ eval "$(rbenv init -)"
 
 # MAMP locations
 export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin:$PATH"
+export PATH="/Applications/MAMP/bin/php/php5.3.6/bin:$PATH"
