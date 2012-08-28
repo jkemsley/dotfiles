@@ -10,6 +10,7 @@ alias b='behat'
 # Run PHPUnit
 alias p='phpunit'
 
+# Locate IP
 alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | 
    cut -d\   -f2"
 
