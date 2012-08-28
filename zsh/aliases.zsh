@@ -20,6 +20,12 @@ alias td="todo.sh"
 alias d="todo.sh do"
 alias a="todo.sh add"
 
+# Reload .zshrc
+function zr () {
+  echo "Reloading .zshrc"
+  source $HOME/.zshrc
+}
+
 function reload! () {
   touch tmp/restart.txt
 }
