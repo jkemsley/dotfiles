@@ -24,9 +24,11 @@ export EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"' # edit git commit m
 export RUBYOPT='rubygems' # ruby always requires rubygems
 export TODOTXT_DEFAULT_ACTION=ls
 
-# rbenv Installation
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# rbenv Installation - if we have rbenv installed.
+if (( $+commands[rbenv] )) ; then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
+fi
 
 # MAMP locations
 export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin:$PATH"
