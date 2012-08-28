@@ -8,7 +8,7 @@ alias s='bundle exec rspec'
 alias b='behat'
 
 # Run PHPUnit
-alias p='phpunit'
+alias p='phpunit tests'
 
 # Locate IP
 alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | 
