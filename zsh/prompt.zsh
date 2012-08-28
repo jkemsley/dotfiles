@@ -37,16 +37,15 @@ need_push () {
 }
 
 # This keeps the number of todos always available the right hand side of my
-# command line. I filter it to only count those tagged as "+next", so it's more
-# of a motivation to clear out the list.
+# command line.
 todo(){
   if $(which todo.sh &> /dev/null)
   then
-    num=$(echo $(todo.sh ls +next | wc -l))
-    let todos=num-2
-    if [ $todos != 0 ]
+    num=$(echo $(todo.sh ls | tail -n 1 | cut -d " " -f2 ))
+    
+    if [ $num != 0 ]
     then
-      echo "$todos"
+      echo "$num"
     else
       echo ""
     fi
@@ -67,9 +66,9 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(user_name) at $(host_name) in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
-  export RPROMPT="%{$fg_bold[grey]%}$(todo)%{$reset_color%}"
+  export PROMPT=$'\n$(user_name) at $(host_name) in $(directory_name) $(git_dirty)$(need_push)\n› ' 
+  export RPROMPT="%{$fg_bold[gray]%}$(todo)%{$reset_color%}"
 }
 
 precmd() {
