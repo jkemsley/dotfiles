@@ -30,13 +30,13 @@ function reload! () {
   touch tmp/restart.txt
 }
 
-# better than rm -rf
 # cd to the default working directory set by current_working_project
 function cwp {
   export wdir=`cat $HOME/bin/config/current_project_path`
   cd $wdir
 }
 
+# Better than rm -rf
 function trash () {
   mv $* ~/.Trash
 }
