@@ -21,7 +21,8 @@ export GREP_OPTIONS='--color=auto'
 
 export EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"' # edit git commit messages (among other things) in vim
 
-export RUBYOPT='rubygems' # ruby always requires rubygems
+export RUBYOPT='rubygems' # Ruby always requires rubygems
+
 export TODOTXT_DEFAULT_ACTION=ls
 
 # rbenv Installation - if we have rbenv installed.
