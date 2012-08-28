@@ -14,3 +14,7 @@ source ~/.zsh/aliases.zsh
 source ~/.zsh/bindkeys.zsh
 source ~/.zsh/completion_rake.zsh
 
+if [ -e ~/.local.zsh ]; then
+	source ~/.local.zsh
+fi
+
