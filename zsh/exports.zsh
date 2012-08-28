@@ -10,8 +10,6 @@ export CLICOLOR=1
 export PROJECTS=$HOME/projects
 export NODE_PATH=/usr/local/lib/node
 
-export NODE_PATH=/usr/local/lib/node
-
 export CLICOLOR=1 # turns on colors
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export TERM=xterm-color
@@ -31,6 +29,3 @@ if (( $+commands[rbenv] )) ; then
 	eval "$(rbenv init -)"
 fi
 
-# MAMP locations
-export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin:$PATH"
-export PATH="/Applications/MAMP/bin/php/php5.3.6/bin:$PATH"
