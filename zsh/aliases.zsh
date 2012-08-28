@@ -1,6 +1,3 @@
-# My aliases
-alias easy_off='sudo kextunload -v /System/Library/Extensions/EasyTetherUSBEthernet.kext'
-
 alias c='bundle exec cucumber'
 alias s='bundle exec rspec'
 alias redis= 'redis-server > /Users/jlsuttles/redis.log &'
