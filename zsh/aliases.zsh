@@ -41,12 +41,9 @@ function trash () {
   mv $* ~/.Trash
 }
 
-function current_working_project {
+function this {
   pwd > ~/bin/config/current_project_path
-}
-
-function :w () {
-  echo "Ugh. You're not in vim, and your shits all retarded"
+  echo "Set current working project to `pwd`"
 }
 
 function internet {
