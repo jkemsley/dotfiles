@@ -11,3 +11,5 @@ add /usr/local/sbin
 
 add /Applications/MAMP/Library/bin:/Applications/MAMP/bin
 add /Applications/MAMP/bin/php/php5.3.6/bin:$PATH
+
+add /Users/alex/Library/Haskell/bin
