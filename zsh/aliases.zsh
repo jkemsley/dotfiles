@@ -14,7 +14,6 @@ alias p='phpunit'
 alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | 
    cut -d\   -f2"
 
-# reloads passenger and pow
 # Run todo.sh
 alias td="todo.sh"
 alias d="todo.sh do"
@@ -26,6 +25,7 @@ function zr () {
   source $HOME/.zshrc
 }
 
+# Reloads passenger and pow
 function reload! () {
   touch tmp/restart.txt
 }
