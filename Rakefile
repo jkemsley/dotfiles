@@ -1,3 +1,4 @@
+# Installation routine for dotfiles.
 namespace :install do
   desc "install everything"
   task :all => ["install:ack", "install:git", "install:irb", "install:vim", "install:zsh"]
@@ -29,6 +30,7 @@ namespace :install do
   end
 end
 
+# Gets the file (which can be a directory) and creates a link to it under the name .file in the home directory.
 def install(*files)
   files.each do |file|
     src = "#{File.expand_path(".")}/#{file}"
