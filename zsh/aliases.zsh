@@ -15,7 +15,7 @@ alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 |
    cut -d\   -f2"
 
 # Run todo.sh
-alias td="todo.sh"
+alias td="echo && todo.sh | sort | sed '1d;\$d'"
 alias d="todo.sh do"
 alias a="todo.sh add"
 
