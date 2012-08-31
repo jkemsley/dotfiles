@@ -21,7 +21,6 @@ alias a="todo.sh add"
 
 # Reload .zshrc
 function zr () {
-  echo "Reloading .zshrc"
   source $HOME/.zshrc
 }
 
