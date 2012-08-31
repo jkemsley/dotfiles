@@ -19,6 +19,11 @@ alias td="echo && todo.sh | sort | sed '1d;\$d'"
 alias d="todo.sh do"
 alias a="todo.sh add"
 
+# Run Punch.py
+alias i="punch in"
+alias o="punch out"
+alias r="punch report"
+
 # Reload .zshrc
 function zr () {
   source $HOME/.zshrc
