@@ -24,11 +24,6 @@ function zr () {
   source $HOME/.zshrc
 }
 
-# Reloads passenger and pow
-function reload! () {
-  touch tmp/restart.txt
-}
-
 # cd to the default working directory set by current_working_project
 function cwp {
   export wdir=`cat $HOME/bin/config/current_project_path`
