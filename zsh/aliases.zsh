@@ -4,6 +4,9 @@ alias c='bundle exec cucumber'
 # Run git status
 alias s='git status'
 
+# Edit the current directory in Sublime Edit
+alias e='subl .'
+
 # Run Behat
 alias b='behat'
 
