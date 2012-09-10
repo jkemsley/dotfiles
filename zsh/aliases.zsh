@@ -1,8 +1,8 @@
 # Run Cucumber
 alias c='bundle exec cucumber'
 
-# Run RSpec
-alias s='bundle exec rspec'
+# Run git status
+alias s='git status'
 
 # Run Behat
 alias b='behat'
