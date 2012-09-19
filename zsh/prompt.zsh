@@ -53,6 +53,21 @@ todo(){
   fi
 }
 
+# Check we have Punch.py installed and if so show current task.
+current_task(){
+  if $(which punch &> /dev/null); then
+    if punch wh | grep -v 'No task is active.' &> /dev/null
+      then
+        echo "\n$(punch wh | cut -d ":" -f2 | sed 's/^[ \t]*//')"
+        
+    else
+      echo ""
+    fi
+  else
+    echo ""
+  fi
+}
+
 user_name(){
 	echo "%{$fg[magenta]%}%n%{$reset_color%}"
 }
@@ -66,7 +81,7 @@ directory_name(){
 }
 
 set_prompt () {
-  export PROMPT=$'\n$(user_name) at $(host_name) in $(directory_name) $(git_dirty)$(need_push)\n› ' 
+  export PROMPT=$'\n$(user_name) at $(host_name) in $(directory_name) $(git_dirty)$(need_push)$(current_task)\n› ' 
   export RPROMPT="%{$fg_bold[gray]%}$(todo)%{$reset_color%}"
 }
 
