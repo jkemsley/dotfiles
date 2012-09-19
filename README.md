@@ -1,4 +1,6 @@
-# Ehren Murdick's Config
+# Dotfiles
+
+Forked from [Ehren Murdick's Config](https://github.com/ehrenmurdick/config).
 
 Cleaned up by [Jessica Lynn Suttles](http://github.com/jlsuttles/config)
 
