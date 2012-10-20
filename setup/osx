@@ -141,7 +141,6 @@ defaults write com.apple.BezelServices kDimTime -int 300
 # Screen                                                                      #
 ###############################################################################
 
-
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
