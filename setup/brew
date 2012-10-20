@@ -9,16 +9,18 @@ brew upgrade
 # Install wget with IRI support
 brew install wget --enable-iri
 
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
-brew tap josegonzalez/homebrew-php
+# Siege for basic load testing
+brew install siege
 
-# Install everything else
+# Growlnotify for doing Growl in shell scripts
+brew install growlnotify
+
+# Useful development tools
 brew install ack
-brew install git
 brew install rename
 brew install tree
+brew install hub
+brew install git-extras
 
 # Remove outdated versions from the cellar
 brew cleanup
