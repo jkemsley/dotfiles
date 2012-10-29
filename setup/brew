@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+# Install wget with IRI support
+brew install wget --enable-iri
+
+# Siege for basic load testing
+brew install siege
+
+# Growlnotify for doing Growl in shell scripts
+brew install growlnotify
+
+# Useful development tools
+brew install ack
+brew install rename
+brew install tree
+brew install hub
+brew install git-extras
+
+# Remove outdated versions from the cellar
+brew cleanup
