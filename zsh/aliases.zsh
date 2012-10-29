@@ -24,6 +24,7 @@ alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 |
 alias td="echo && todo.sh | sort | sed '1d;\$d'"
 alias d="todo.sh do"
 alias a="todo.sh add"
+alias te="$EDITOR ~/Documents/todo/todo.txt"
 
 # Run Punch.py
 alias i="punch in"
