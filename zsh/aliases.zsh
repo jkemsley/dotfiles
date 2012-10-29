@@ -1,3 +1,6 @@
+# Open Dotfiles
+alias z="$EDITOR ~/Code/dotfiles"
+
 # Run Cucumber
 alias c='bundle exec cucumber'
 
