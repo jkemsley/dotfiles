@@ -10,8 +10,8 @@ alias s='git status'
 # Edit the current directory in Sublime Edit
 alias e='subl .'
 
-# Run Behat
-alias b='behat'
+# Run PHPUnit Tests (In Laravel Artisan)
+alias q='php artisan test'
 
 # Run PHPUnit
 alias p='phpunit tests'
