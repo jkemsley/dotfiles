@@ -16,6 +16,9 @@ alias q='php artisan test'
 # Run PHPUnit
 alias p='phpunit tests'
 
+# Clear screen
+alias c='clear'
+
 # Locate IP
 alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | 
    cut -d\   -f2"
