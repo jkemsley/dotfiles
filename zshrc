@@ -18,3 +18,5 @@ if [ -e ~/.local.zsh ]; then
 	source ~/.local.zsh
 fi
 
+source /opt/boxen/env.sh
+
