@@ -19,4 +19,3 @@ if [ -e ~/.local.zsh ]; then
 fi
 
 source /opt/boxen/env.sh
-

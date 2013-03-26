@@ -68,6 +68,10 @@ current_task(){
   fi
 }
 
+title(){
+  printf "\033]0;%s\007" "$1"
+}
+
 user_name(){
 	echo "%{$fg[magenta]%}%n%{$reset_color%}"
 }
@@ -80,7 +84,18 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}${PWD/#$HOME/~}%{$reset_color%}"
 }
 
+precmd(){
+  
+}
+
+preexec(){
+  title `pwd`
+}
+
 set_prompt () {
+  # Could use preexec or precmd
+  #title `pwd`
+
   export PROMPT=$'\n$(user_name) at $(host_name) in $(directory_name) $(git_dirty)$(need_push)$(current_task)\n› ' 
   export RPROMPT="%{$fg_bold[gray]%}$(todo)%{$reset_color%}"
 }
