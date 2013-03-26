@@ -11,3 +11,4 @@ add /usr/local/sbin
 
 add /Applications/MAMP/Library/bin:/Applications/MAMP/bin
 add /Applications/MAMP/bin/php/php5.3.6/bin
+add /usr/local/heroku/bin
