@@ -27,3 +27,5 @@ if (( $+commands[rbenv] )) ; then
 	eval "$(rbenv init -)"
 fi
 
+# nvm installation
+source /opt/boxen/nvm/nvm.sh
