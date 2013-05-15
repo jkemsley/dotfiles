@@ -23,3 +23,8 @@ OSX defaults learnt from [Mathais Bynens](https://github.com/mathiasbynens/dotfi
 For setting up some sensible defaults and removal of some annoyances from Mac OS run `setup/osx`. 
 
 To install some pretty vital Mac OS utilities, run `setup/brew` which requires [Homebrew](http://mxcl.github.com/homebrew/) to be installed.
+
+## Todo
+
+- Integrate with Boxen
+- Ensure this works cross platform - currently heavily skewed to Mac development machines.
