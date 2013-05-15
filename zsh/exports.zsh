@@ -29,3 +29,6 @@ fi
 
 # nvm installation
 source /opt/boxen/nvm/nvm.sh
+
+# Select a version of Node to use.
+nvm use 0.8 > /dev/null
