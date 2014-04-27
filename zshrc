@@ -18,4 +18,5 @@ if [ -e ~/.local.zsh ]; then
 	source ~/.local.zsh
 fi
 
-source /opt/boxen/env.sh
+# Disable Boxen for the moment.
+#source /opt/boxen/env.sh
