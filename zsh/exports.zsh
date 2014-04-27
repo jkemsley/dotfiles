@@ -28,7 +28,7 @@ if (( $+commands[rbenv] )) ; then
 fi
 
 # nvm installation
-source /opt/boxen/nvm/nvm.sh
+source /usr/local/opt/nvm/nvm.sh
 
 # Select a version of Node to use.
-nvm use 0.8 > /dev/null
+nvm use v0.10.26 > /dev/null
