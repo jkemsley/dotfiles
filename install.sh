@@ -3,7 +3,7 @@
 set -e
 
 # Install ZSH
-chsh -s /bin/sh
+chsh -s /bin/zsh
 ln -s `pwd`/zshrc ~/.zshrc
 ln -s `pwd`/zsh ~/.zsh
 
