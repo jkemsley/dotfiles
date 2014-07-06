@@ -56,14 +56,10 @@ function this {
 }
 
 function internet {
-  # count 3 packets
-  # timeout 3 seconds
-  # /dev/null unix devices that doesn't go anywhere
-  # 1 is stdout, 2 is stderr, 2 follow 1
   if (ping -c 3 -t 3 google.com > /dev/null 2>&1)
   then
-    echo 'yep'
+    echo 'There is the internet.'
   else
-    echo 'nope'
+    echo 'No internet up.'
   fi
 }
