@@ -19,4 +19,4 @@ brew install go hg subversion
 brew install ansible
 
 # Remove outdated versions from the cellar
-
+brew cleanup
