@@ -15,7 +15,7 @@ brew install growlnotify
 # Useful development tools
 brew install ack rename tree hub git-extras findutils s3cmd gnu-tar go
 brew install rbenv ruby-build
+brew install go hg subversion
 
 # Remove outdated versions from the cellar
-brew cleanup
 
