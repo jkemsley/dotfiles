@@ -13,7 +13,7 @@ brew install wget --enable-iri
 brew install growlnotify
 
 # Useful development tools
-brew install ack rename tree hub git-extras findutils s3cmd gnu-tar go
+brew install ack rename tree hub git-extras findutils s3cmd gnu-tar
 brew install rbenv ruby-build
 brew install go hg subversion
 
