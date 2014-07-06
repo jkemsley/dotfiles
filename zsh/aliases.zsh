@@ -34,6 +34,8 @@ alias i="punch in"
 alias o="punch out"
 alias r="punch report"
 
+alias e="$EDITOR ."
+
 # Reload .zshrc
 function zr () {
   source $HOME/.zshrc
