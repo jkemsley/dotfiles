@@ -1,6 +1,6 @@
 [user]
-	name = Ehren Murdick
-	email = ehren.murdick@gmail.com
+	name = 
+	email = 
 [core]
   editor = "mvim -f -c \"au VimLeave * !open -a iTerm\""
 [color]
@@ -34,12 +34,13 @@
   fx     = !git fetch && gitx --all
   pp     = !git pull && git push
   x      = !gitx --all
+  lg     = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [push]
   default = current
 [github]
 	user = ehrenmurdick
   token = tokentoken
 [git-pair]
-	authors = Ehren Murdick <ehren.murdick@gmail.com>
+	authors = 
 [branch]
 	autosetuprebase = always
